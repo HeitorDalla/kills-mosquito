@@ -7,8 +7,7 @@ let tempoRestante = null;
 btnInciar.addEventListener("click", (event) => {
     event.preventDefault();
 
-    const dificuldade = select.value
-    console.log(dificuldade)
+    const dificuldade = select.value;
 
     if (!dificuldade) {
         alert("Escolha uma das opções!");
@@ -20,12 +19,19 @@ btnInciar.addEventListener("click", (event) => {
             tempoRestante = 100;
             break;
         case 'Intermediário':
-            tempoRestante = 80
+            tempoRestante = 80;
             break;
         case 'Avançado':
-            tempoRestante = 60
+            tempoRestante = 60;
             break;
     }
 
-    window.location.href = 'app.html'
+    window.location.href = 'app.html';
+})
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    event.preventDefault();
+    document.querySelector("#exemplo").addEventListener("click", () => {
+        console.log('clickei')
+    })
 })
